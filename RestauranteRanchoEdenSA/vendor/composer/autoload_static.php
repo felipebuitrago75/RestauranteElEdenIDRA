@@ -85,6 +85,7 @@ class ComposerStaticInit9c63a90df301dd2952e6281d8a661a4d
         'A' => 
         array (
             'App\\' => 4,
+            'Acacha\\AdminLTETemplateLaravel\\' => 31,
         ),
     );
 
@@ -215,6 +216,10 @@ class ComposerStaticInit9c63a90df301dd2952e6281d8a661a4d
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
+        'Acacha\\AdminLTETemplateLaravel\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/acacha/admin-lte-template-laravel/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -264,6 +269,11 @@ class ComposerStaticInit9c63a90df301dd2952e6281d8a661a4d
     );
 
     public static $classMap = array (
+        'Acacha\\AdminLTETemplateLaravel\\AdminLTE' => __DIR__ . '/..' . '/acacha/admin-lte-template-laravel/src/AdminLTE.php',
+        'Acacha\\AdminLTETemplateLaravel\\Console\\AdminLTE' => __DIR__ . '/..' . '/acacha/admin-lte-template-laravel/src/Console/AdminLTE.php',
+        'Acacha\\AdminLTETemplateLaravel\\Facades\\AdminLTE' => __DIR__ . '/..' . '/acacha/admin-lte-template-laravel/src/Facades/AdminLTE.php',
+        'Acacha\\AdminLTETemplateLaravel\\Providers\\AdminLTETemplateServiceProvider' => __DIR__ . '/..' . '/acacha/admin-lte-template-laravel/src/Providers/AdminLTETemplateServiceProvider.php',
+        'Acacha\\AdminLTETemplateLaravel\\app\\Exceptions\\Handler' => __DIR__ . '/..' . '/acacha/admin-lte-template-laravel/src/Exceptions/Handler.php',
         'App\\Console\\Commands\\Inspire' => __DIR__ . '/../..' . '/app/Console/Commands/Inspire.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Events\\Event' => __DIR__ . '/../..' . '/app/Events/Event.php',
