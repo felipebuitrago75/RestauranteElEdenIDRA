@@ -16,8 +16,14 @@ Route::get('/', function () {
 });
 
 
-Route::group(['middleware' => 'web'], function () {
+Route::group(['middleware' => 'auth'], function () {
     Route::auth();
     Route::get('/admin', 'HomeController@index');
  
 });
+
+ Route::post('/auth/login', 'Auth\AuthController@postLogin');
+Route::resource('usuario', 'UsuarioControlador');
+Route::resource('indicadores','IndicadorControlador');
+
+Route::resource('tareas','tareaControlador');
