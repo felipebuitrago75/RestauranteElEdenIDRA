@@ -51,17 +51,23 @@ class IndicadorControlador extends Controller
     	return view("indicadores.show",["indicador"=>Indicador::findOrFail($id)]);
     }
     public function edit($id){
-    	return view("indicadores.edit",["indicador"=>Indicador::findOrFail($id)]);
+        $indicador =Indicador::findOrFail($id);
+
+    	return view("indicadores.edit",compact('indicador'));
     	
     }
-    public function update(Request $request,$id){
-    	$indicador =Indicador::findOrFail($id);
-    	$indicador->fecha=Carbon::now();
-                $indicador->nombre=$request->get('nombre');
-                $indicador->descripcion=$request->get('descripcion');
-                $indicador->usuario_idUsuario=1;
-    	$indicador->update();
-    	return Redirect::to('indicadores');
+    public function update(Request $request){
+       $indicador = new Indicador($request->all());
+        $indicador->fecha=Carbon::now();
+        $indicador->nombre=$request->get('nombre');
+        $indicador->descripcion=$request->get('descripcion');
+        $indicador->usuario_idUsuario=1;
+        $indicador->update();
+        
+        $indicadores =Indicador::paginate();
+        $tareas = Tarea::paginate(); 
+        return view('indicadores.index',compact('indicadores','tareas'));
+   
 
 
     }
