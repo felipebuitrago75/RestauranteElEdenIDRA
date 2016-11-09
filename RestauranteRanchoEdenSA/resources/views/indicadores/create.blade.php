@@ -21,9 +21,9 @@
 						   {!! Form::textarea('descripcion',null,['class'=> 'form-control','style' => 'resize:none'])!!}
 
 						  </div>
-				
+					
 						 
-						  <button type="submit" class="btn btn-default">registrar</button>
+						  <button type="submit" class="btn btn-default">Registrar</button>
 					</form>
 
 
